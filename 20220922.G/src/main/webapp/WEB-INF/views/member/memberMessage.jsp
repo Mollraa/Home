@@ -5,9 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link>
 </head>
 <body>
-<jsp:forward page="main.yd"/>
+<div align="center">
+<div><jsp:include page="../main/menu.jsp"/></div>
+<br>
+<div><h1 align="center">${message}</h1></div>
+</div>
 </body>
 </html>

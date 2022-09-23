@@ -22,6 +22,6 @@
 		</environment>
 	</environments>
 	<mappers>
-		<package name="co.micol.prj.mapper" />
+		<package name="co.mall.prj.mapper" />
 	</mappers>
 </configuration>
