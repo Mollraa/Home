@@ -90,7 +90,7 @@ margin-right:auto;
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">공지일지도</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">${name }님의 총 구매내역입니다.</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
