@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>수정버튼 누르면 수정되게</title>
+<title>정보조회 - 수정버튼 누르면 수정되게</title>
 
 <style type="text/css">
-#terms_of_service {
-	width: 550px;
-	height: 200px;
-}
 </style>
 </head>
 <body>
@@ -23,28 +19,38 @@
 					<div class="checkout_details_area mt-50 clearfix">
 
 						<div class="cart-page-heading">
-							<h5>${name }님 정보 조회</h5>
+							<h5>${name }님정보조회</h5>
 						</div>
 
-						<form action="memberSelect.yd" onsubmit="return formCheck()"
-							method="post">
-							<div class="row">
+						<div class="row">
+							<form action="memberSelect.yd" onsubmit="return formCheck()"
+								method="post">
+
 								<div class="col-12 mb-3">
 									<label for="memberId">ID</label> <input type="text"
 										class="form-control" id="company" name="memberId"
 										required="required" value="${id}" readonly="readonly">
 
 								</div>
+
 								<div class="col-12 mb-3">
 									<label for="memberPassword"> Passoword</label> <input
 										type="password" class="form-control" id="company"
-										name="memberPassword" required="required" value="${password }" readonly="readonly">
+										name="memberPassword" required="required" value="${password }"
+										readonly="readonly">
 								</div>
 
-								<div class="col-md-6 mb-3">
+
+								<div class="col-12 mb-3">
 									<label for="first_name">Name <span>*</span></label> <input
 										type="text" class="form-control" id="first_name"
 										name="memberName" value="${name }" readonly="readonly">
+								</div>
+
+								<div class="col-12 mb-3">
+									<label for="street_address">Gender <span>*</span></label> <input
+										type="text" class="form-control mb-3" id="street_address"
+										name="memberAddress" value="${gender }">
 								</div>
 
 								<!-- 
@@ -82,19 +88,22 @@
 										name="memberEmail" value="${email }" readonly="readonly">
 								</div>
 								<br> <input type="hidden" name="memberAuthor" value="회원">
-								<br> 
-						</form>
-						<form action="memberEdit.yd">
-							<br> <input type="submit" class="btn karl-checkout-btn"
-								value="수정하기">
-						</form>
+								<br>
+							</form>
+							<form action="memberEdit.yd"
+								style="padding-left: 15px; padding-bottom: 20px;">
+
+								<br>
+								<input type="submit" class="btn karl-checkout-btn" value="수정하기">
+							</form>
+						</div>
+
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 	</div>
-
+	<!-- Active js -->
+	<script src="js/active.js"></script>
 </body>
 </html>

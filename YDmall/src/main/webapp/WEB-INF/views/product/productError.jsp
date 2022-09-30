@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품 선택 삭제</title>
+<title>Insert title here</title>
 </head>
 <body>
-	
+	<div align="center">
+		<div><h1>${message }</h1></div>
+	</div>
 </body>
 </html>

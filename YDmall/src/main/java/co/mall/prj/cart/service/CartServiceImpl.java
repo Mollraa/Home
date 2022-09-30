@@ -39,7 +39,7 @@ public class CartServiceImpl implements CartService {
 
 //	장바구니 상품 삭제
 	@Override
-	public int cartDelete(CartVO vo) {
+	public int cartDelete(CartVO vo) { 
 		return map.cartDelete(vo);
 	}
 

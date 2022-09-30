@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
 <style type="text/css">
-h1{
-background-color: pink;
-width: 100%;
-height: 500px
-
+h1 {
+	background-color: pink;
+	width: 100%;
+	height: 500px
 }
 </style>
 
@@ -19,22 +19,24 @@ height: 500px
 
 </head>
 <body>
-<ul>
-	<li onclick="kakaoLogin();">
-      <a href="javascript:void(0)">
-         <img alt="" src="img/kakao_login_medium_narrow.png">
-      </a>
-	</li>
-	<li onclick="kakaoLogout() ">
-      <a href="javascript:void(0)">
-          <span>카카오 로그아웃</span>
-      </a>
-	</li>
-</ul>
+	<ul>
+		<li onclick="kakaoLogin();"><a href="javascript:void(0)"> <img
+				alt="" src="img/kakao_login_medium_narrow.png">
+		</a></li>
+		<li onclick="out() "><a href="javascript:void(0)"> <span>카카오
+					로그아웃</span>
+		</a></li>
+	</ul>
 
 
+	
+	<script type="text/javascript">
+		function selectProduct(name) {
+			document.getElementById("pName").value = name;
+			frm.submit();
+		}
 
-<script type="text/javascript">
+
 Kakao.init('71076bc0611826d1a0be3f93cf243ec4');
 
 console.log(Kakao.isInitialized()); // sdk초기화여부판단
@@ -48,7 +50,6 @@ function kakaoLogin() {
           success: function (response) {
         	  console.log(response)
         	  alert('카카오 로그인 완료');
-        	 location.href="main.yd";
           },
           fail: function (error) {
             console.log(error)
@@ -61,7 +62,7 @@ function kakaoLogin() {
     })
   }
 	
-function kakaoOut(){
+/* function kakaoOut(){
 	Kakao.Auth.logout()
 	  .then(function(response) {
 	    console.log(Kakao.Auth.getAccessToken()); // null
@@ -71,7 +72,18 @@ function kakaoOut(){
 	  });
 	
 	
-}	
+}	 */
+
+function out (){
+	
+ Kakao.Auth.logout()
+.then(function(response) {
+  console.log(Kakao.Auth.getAccessToken()); // null
+})
+.catch(function(error) {
+  console.log('Not logged in.');
+});
+}
 	
 	
 function kakaoLogout() {
